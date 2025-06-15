@@ -219,8 +219,7 @@ html, body {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 43px;
   width: 2px;
   height: 100%;
   background-color: #000;
@@ -237,8 +236,7 @@ html, body {
 .timeline-icon {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 29px;
   width: 30px;
   height: 30px;
   background-color: #000;
@@ -254,9 +252,8 @@ html, body {
 }
 
 .timeline-icon:hover {
-  transform: translateX(-50%) scale(1.15) rotate(10deg);
+  transform: scale(1.15) rotate(10deg);
 }
-
 
 /* -------------------------------------------
    SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
@@ -374,26 +371,7 @@ html, body {
     padding: 30px 20px;
   }
 
-  .timeline {
-    padding-left: 0;
-    margin-left: 0;
-  }
 
-  .timeline-item {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-  }
-
-  .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .timeline-icon {
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 /* === Từ 769px đến 1024px: dành cho TABLET === */
