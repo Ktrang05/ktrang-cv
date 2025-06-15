@@ -19,7 +19,7 @@ body, html {
    BANNER PHẦN ĐẦU CV
 -------------------------------------------- */
 .banner {
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(to right, #232c3d, #4a598a);
   color: #fff;
   display: flex;
@@ -125,7 +125,7 @@ body, html {
 -------------------------------------------- */
 .cv-main {
   display: flex;
-  width: 100vw;
+  width: 100%;
   min-height: calc(100vh - 180px);
 }
 
@@ -378,3 +378,102 @@ body, html {
   transform: scale(1.2) rotate(8deg);
   opacity: 0.9;
 }
+/* -------------------------------------------
+   RESPONSIVE
+-------------------------------------------- */
+@media screen and (max-width: 768px) {
+  body, html {
+    font-size: 15px;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .avatar-outer {
+    position: static;
+    margin-bottom: 12px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .banner-info {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .banner-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .job-title {
+    font-size: 1rem;
+  }
+
+  .cv-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar {
+    position: static;
+    text-align: center;
+  }
+
+  .timeline::before {
+    left: 25px;
+  }
+
+  .timeline-item {
+    padding-left: 70px;
+  }
+
+  .timeline-icon {
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .section ul,
+  .section p,
+  .exp-header,
+  .exp-company,
+  .edu-degree,
+  .edu-time,
+  .edu-detail {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 16px 10px;
+    text-align: center;
+  }
+}
+
