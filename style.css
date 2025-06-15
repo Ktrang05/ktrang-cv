@@ -384,26 +384,43 @@ body, html {
 @media screen and (max-width: 768px) {
   body, html {
     font-size: 15px;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #232c3d;
+    padding: 8px 0;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 10px;
   }
 
   .banner {
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 24px 16px;
+    padding: 24px 16px 40px;
     text-align: center;
   }
 
   .avatar-outer {
     position: static;
-    margin-bottom: 12px;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 16px;
   }
 
   .avatar {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .banner-info {
@@ -417,6 +434,7 @@ body, html {
 
   .job-title {
     font-size: 1rem;
+    color: #c3c4ff;
   }
 
   .cv-main {
@@ -425,28 +443,16 @@ body, html {
 
   .sidebar {
     width: 100%;
-    max-width: 100%;
-    padding: 40px 20px;
+    padding: 32px 20px;
   }
 
   .main-content {
     width: 100%;
-    padding: 40px 20px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .navbar {
-    position: static;
-    text-align: center;
+    padding: 32px 20px;
   }
 
   .timeline::before {
-    left: 25px;
+    left: 24px;
   }
 
   .timeline-item {
@@ -454,9 +460,9 @@ body, html {
   }
 
   .timeline-icon {
-    left: 12px;
-    width: 24px;
-    height: 24px;
+    left: 10px;
+    width: 22px;
+    height: 22px;
     font-size: 12px;
   }
 
@@ -476,4 +482,3 @@ body, html {
     text-align: center;
   }
 }
-
