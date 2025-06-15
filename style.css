@@ -13,6 +13,7 @@ body, html {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f4f6fa;
   font-size: 16px; 
+  scroll-behavior: smooth;
 }
 
 /* -------------------------------------------
@@ -379,7 +380,7 @@ body, html {
   opacity: 0.9;
 }
 /* -------------------------------------------
-   RESPONSIVE
+   RESPONSIVE-MOBILE
 -------------------------------------------- */
 @media screen and (max-width: 768px) {
   body, html {
@@ -387,11 +388,13 @@ body, html {
     overflow-x: hidden;
   }
 
+  /* Navbar */
   .navbar {
     position: sticky;
     top: 0;
     background-color: #232c3d;
     padding: 8px 0;
+    z-index: 1000;
   }
 
   .navbar ul {
@@ -402,6 +405,7 @@ body, html {
     padding: 0 10px;
   }
 
+  /* Banner */
   .banner {
     flex-direction: column;
     align-items: center;
@@ -437,20 +441,23 @@ body, html {
     color: #c3c4ff;
   }
 
+  /* Phần chính */
   .cv-main {
+    display: flex;
     flex-direction: column;
   }
 
   .sidebar {
     width: 100%;
-    padding: 32px 20px;
+    padding: 24px 16px;
   }
 
   .main-content {
     width: 100%;
-    padding: 32px 20px;
+    padding: 24px 16px;
   }
 
+  /* Timeline */
   .timeline::before {
     left: 24px;
   }
@@ -466,6 +473,7 @@ body, html {
     font-size: 12px;
   }
 
+  /* Kích thước chữ cho nội dung */
   .section ul,
   .section p,
   .exp-header,
@@ -473,12 +481,16 @@ body, html {
   .edu-degree,
   .edu-time,
   .edu-detail {
-    font-size: 16px;
+    font-size: 15px;
   }
 
+  /* Footer */
   footer {
     font-size: 14px;
     padding: 16px 10px;
     text-align: center;
   }
 }
+
+
+
