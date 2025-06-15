@@ -14,9 +14,6 @@ html, body {
   background: #f4f6fa;
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-padding-top: 80px;
 }
 
 /* -------------------------------------------
@@ -36,9 +33,6 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 40px;
-  width: 100%;
-  max-width: 100%;
-  text-align: center;
 }
 
 .navbar a {
@@ -89,7 +83,6 @@ html, body {
   clip-path: circle(50% at 50% 50%);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .avatar:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -101,7 +94,6 @@ html, body {
   position: relative;
   z-index: 2;
 }
-
 .banner-info h1 {
   font-size: 2.3rem;
   font-weight: bold;
@@ -378,6 +370,11 @@ html, body {
   .main-content {
     padding: 30px 20px;
   }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 /* === Từ 769px đến 1024px: dành cho TABLET === */
@@ -399,3 +396,4 @@ html, body {
     gap: 24px;
   }
 }
+
