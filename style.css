@@ -14,6 +14,7 @@ html, body {
   background: #f4f6fa;
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* -------------------------------------------
@@ -26,19 +27,34 @@ html, body {
   width: 100%;
   z-index: 999;
   top: 0;
+  overflow-x: auto;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 40px;
+  padding: 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Ẩn scrollbar Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+.navbar ul::-webkit-scrollbar {
+  display: none; /* Ẩn scrollbar Chrome, Safari */
+}
+
+.navbar li {
+  flex-shrink: 0;
 }
 
 .navbar a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
@@ -57,7 +73,7 @@ html, body {
   align-items: flex-end;
   height: 180px;
   position: relative;
-  padding: 90px 20px 24px 60px; /* thêm 90px để né navbar cố định */
+  padding: 30px 20px 24px 60px;
 }
 
 .avatar-outer {
@@ -338,12 +354,13 @@ html, body {
    RESPONSIVE
 =========================================================== */
 
+/* === Dưới 768px: dành cho MOBILE === */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 90px 20px 30px;
+    padding: 30px 20px;
     text-align: center;
   }
 
@@ -369,13 +386,9 @@ html, body {
   .main-content {
     padding: 30px 20px;
   }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 12px;
-  }
 }
 
+/* === Từ 769px đến 1024px: dành cho TABLET === */
 @media (min-width: 769px) and (max-width: 1024px) {
   .cv-main {
     flex-direction: column;
