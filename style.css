@@ -219,7 +219,8 @@ html, body {
   content: "";
   position: absolute;
   top: 0;
-  left: 43px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 2px;
   height: 100%;
   background-color: #000;
@@ -236,7 +237,8 @@ html, body {
 .timeline-icon {
   position: absolute;
   top: 0;
-  left: 29px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 30px;
   height: 30px;
   background-color: #000;
@@ -252,8 +254,9 @@ html, body {
 }
 
 .timeline-icon:hover {
-  transform: scale(1.15) rotate(10deg);
+  transform: translateX(-50%) scale(1.15) rotate(10deg);
 }
+
 
 /* -------------------------------------------
    SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
