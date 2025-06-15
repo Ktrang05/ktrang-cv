@@ -7,16 +7,53 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   width: 100%;
   height: 100%;
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f4f6fa;
-  font-size: 16px; 
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 80px;
 }
 
 /* -------------------------------------------
-   BANNER PHẦN ĐẦU CV
+   NAVBAR
+-------------------------------------------- */
+.navbar {
+  background-color: #232c3d;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #b5b6ff;
+}
+
+/* -------------------------------------------
+   BANNER
 -------------------------------------------- */
 .banner {
   width: 100vw;
@@ -26,8 +63,7 @@ body, html {
   align-items: flex-end;
   height: 180px;
   position: relative;
-  padding-left: 60px;
-  padding-right: 24px;
+  padding: 30px 20px 24px 60px;
 }
 
 .avatar-outer {
@@ -53,6 +89,7 @@ body, html {
   clip-path: circle(50% at 50% 50%);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .avatar:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -64,19 +101,21 @@ body, html {
   position: relative;
   z-index: 2;
 }
+
 .banner-info h1 {
   font-size: 2.3rem;
   font-weight: bold;
   margin-bottom: 6px;
   letter-spacing: 1px;
 }
+
 .job-title {
   font-size: 1.15rem;
   color: #b5b6ff;
 }
 
 /* -------------------------------------------
-   BỐ CỤC TỔNG THỂ
+   CV MAIN BỐ CỤC
 -------------------------------------------- */
 .cv-main {
   display: flex;
@@ -85,7 +124,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   SIDEBAR BÊN TRÁI
+   SIDEBAR
 -------------------------------------------- */
 .sidebar {
   background: #edeef2;
@@ -125,6 +164,7 @@ body, html {
 .contact ul li {
   margin-bottom: 6px;
 }
+
 .contact ul li i {
   margin-right: 10px;
   color: #232c3d;
@@ -143,6 +183,7 @@ body, html {
   line-height: 1.6;
   color: #333;
 }
+
 .languages-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -153,6 +194,7 @@ body, html {
   line-height: 1.6;
   color: #333;
 }
+
 .skills-list li::before,
 .languages-list li::before {
   content: "• ";
@@ -161,7 +203,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   NỘI DUNG CHÍNH CV
+   NỘI DUNG CHÍNH
 -------------------------------------------- */
 .main-content {
   flex: 1;
@@ -172,7 +214,9 @@ body, html {
   gap: 38px;
 }
 
-/* Timeline */
+/* -------------------------------------------
+   TIMELINE
+-------------------------------------------- */
 .timeline {
   position: relative;
   padding-left: 0;
@@ -212,6 +256,7 @@ body, html {
   font-size: 14px;
   box-shadow: 0 0 0 4px #fff;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
 
 .timeline-icon:hover {
@@ -219,7 +264,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   PHẦN SECTION CHUNG
+   SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
 -------------------------------------------- */
 .section h2 {
   font-size: 1.1rem;
@@ -227,11 +272,13 @@ body, html {
   margin-bottom: 10px;
   font-weight: 700;
 }
+
 .section hr {
   border: none;
   border-top: 2px solid #000;
   margin-bottom: 14px;
 }
+
 .section ul,
 .section p,
 .exp-header,
@@ -243,56 +290,33 @@ body, html {
   color: #333;
   margin-left: 10px;
 }
+
 .section {
   scroll-margin-top: 80px;
   animation: fadeUp 1s ease forwards;
   opacity: 0;
   transform: translateY(20px);
 }
+
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .exp-item,
 .edu-item {
   margin-bottom: 18px;
 }
+
 .edu-time {
   font-size: 0.96rem;
   color: #333;
 }
 
 /* -------------------------------------------
-   THANH ĐIỀU HƯỚNG
--------------------------------------------- */
-.navbar {
-  background-color: #232c3d;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  top: 0;
-}
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.navbar a:hover {
-  color: #b5b6ff;
-}
-
-/* -------------------------------------------
-   ICON MẠNG XÃ HỘI
+   SOCIAL MEDIA ICONS
 -------------------------------------------- */
 .icon-link {
   display: inline-block;
@@ -300,17 +324,29 @@ body, html {
   font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-.icon-link.github i { color: #333333; }
-.icon-link.facebook i { color: #1877F2; }
-.icon-link.instagram i { color: #E1306C; }
+
+.icon-link.github i {
+  color: #333;
+}
+
+.icon-link.facebook i {
+  color: #1877F2;
+}
+
+.icon-link.instagram i {
+  color: #E1306C;
+}
+
 .icon-link:hover {
   transform: scale(1.2) rotate(8deg);
   opacity: 0.9;
 }
 
-/* -------------------------------------------
-   RESPONSIVE: Mobile Fix
--------------------------------------------- */
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+/* === Dưới 768px: dành cho MOBILE === */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -342,40 +378,24 @@ body, html {
   .main-content {
     padding: 30px 20px;
   }
+}
+
+/* === Từ 769px đến 1024px: dành cho TABLET === */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cv-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-content {
+    padding: 30px 32px;
+  }
 
   .navbar ul {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .timeline {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .timeline-item {
-    padding-left: 0;
-    padding-top: 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .timeline-icon {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .timeline-item h3,
-  .timeline-item p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 24px;
   }
 }
