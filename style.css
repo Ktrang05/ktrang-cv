@@ -30,7 +30,6 @@ body, html {
   padding-right: 24px;
 }
 
-/* Ảnh avatar hình tròn bên trái banner */
 .avatar-outer {
   position: absolute;
   left: 20px;
@@ -43,7 +42,6 @@ body, html {
   justify-content: center;
 }
 
-/* Style cho ảnh avatar */
 .avatar {
   width: 208px;
   height: 208px;
@@ -60,7 +58,6 @@ body, html {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Thông tin tên và chức danh bên phải avatar */
 .banner-info {
   margin-left: 200px;
   margin-bottom: 32px;
@@ -73,51 +70,9 @@ body, html {
   margin-bottom: 6px;
   letter-spacing: 1px;
 }
-
 .job-title {
   font-size: 1.15rem;
   color: #b5b6ff;
-}
-
-/* -------------------------------------------
-   RESPONSIVE: Khi màn hình nhỏ
--------------------------------------------- */
-@media (max-width: 768px) {
-  .banner {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .avatar-outer {
-    position: static;
-    margin-bottom: 16px;
-  }
-
-  .banner-info {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  .cv-main {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .main-content {
-    padding: 30px 20px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 12px;
-  }
 }
 
 /* -------------------------------------------
@@ -170,7 +125,6 @@ body, html {
 .contact ul li {
   margin-bottom: 6px;
 }
-
 .contact ul li i {
   margin-right: 10px;
   color: #232c3d;
@@ -189,8 +143,6 @@ body, html {
   line-height: 1.6;
   color: #333;
 }
-
-/* Danh sách ngôn ngữ: hiển thị dạng lưới */
 .languages-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -201,8 +153,6 @@ body, html {
   line-height: 1.6;
   color: #333;
 }
-
-/* Icon dấu chấm đầu dòng */
 .skills-list li::before,
 .languages-list li::before {
   content: "• ";
@@ -222,7 +172,7 @@ body, html {
   gap: 38px;
 }
 
-/* Timeline hiển thị học vấn, kinh nghiệm dạng trục dọc */
+/* Timeline */
 .timeline {
   position: relative;
   padding-left: 0;
@@ -247,7 +197,6 @@ body, html {
   scroll-margin-top: 100px;
 }
 
-/* Icon chấm tròn trong timeline */
 .timeline-icon {
   position: absolute;
   top: 0;
@@ -270,7 +219,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   PHẦN SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
+   PHẦN SECTION CHUNG
 -------------------------------------------- */
 .section h2 {
   font-size: 1.1rem;
@@ -278,13 +227,11 @@ body, html {
   margin-bottom: 10px;
   font-weight: 700;
 }
-
 .section hr {
   border: none;
   border-top: 2px solid #000;
   margin-bottom: 14px;
 }
-
 .section ul,
 .section p,
 .exp-header,
@@ -296,33 +243,29 @@ body, html {
   color: #333;
   margin-left: 10px;
 }
-
 .section {
   scroll-margin-top: 80px;
   animation: fadeUp 1s ease forwards;
   opacity: 0;
   transform: translateY(20px);
 }
-
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 .exp-item,
 .edu-item {
   margin-bottom: 18px;
 }
-
 .edu-time {
   font-size: 0.96rem;
   color: #333;
 }
 
 /* -------------------------------------------
-   THANH ĐIỀU HƯỚNG (NAVBAR)
+   THANH ĐIỀU HƯỚNG
 -------------------------------------------- */
 .navbar {
   background-color: #232c3d;
@@ -332,27 +275,24 @@ body, html {
   z-index: 999;
   top: 0;
 }
-
 .navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 40px;
 }
-
 .navbar a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
-
 .navbar a:hover {
   color: #b5b6ff;
 }
 
 /* -------------------------------------------
-   CÁC ICON SOCIAL MEDIA
+   ICON MẠNG XÃ HỘI
 -------------------------------------------- */
 .icon-link {
   display: inline-block;
@@ -360,21 +300,82 @@ body, html {
   font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
-/* Mỗi mạng xã hội có màu riêng */
-.icon-link.github i {
-  color: #333333;
-}
-
-.icon-link.facebook i {
-  color: #1877F2;
-}
-
-.icon-link.instagram i {
-  color: #E1306C;
-}
-
+.icon-link.github i { color: #333333; }
+.icon-link.facebook i { color: #1877F2; }
+.icon-link.instagram i { color: #E1306C; }
 .icon-link:hover {
   transform: scale(1.2) rotate(8deg);
   opacity: 0.9;
+}
+
+/* -------------------------------------------
+   RESPONSIVE: Mobile Fix
+-------------------------------------------- */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .avatar-outer {
+    position: static;
+    margin-bottom: 16px;
+  }
+
+  .banner-info {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .cv-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-content {
+    padding: 30px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    padding-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-icon {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item h3,
+  .timeline-item p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
