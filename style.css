@@ -399,3 +399,10 @@ html, body {
     gap: 24px;
   }
 }
+@media (max-width: 768px) {
+  .timeline-item,
+  .section {
+    scroll-margin-top: 140px; 
+  }
+}
+
