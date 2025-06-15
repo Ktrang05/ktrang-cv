@@ -38,12 +38,12 @@ html, body {
   gap: 40px;
   padding: 0 20px;
   overflow-x: auto;
-  scrollbar-width: none; /* Ẩn scrollbar Firefox */
-  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .navbar ul::-webkit-scrollbar {
-  display: none; /* Ẩn scrollbar Chrome, Safari */
+  display: none;
 }
 
 .navbar li {
@@ -99,6 +99,7 @@ html, body {
   clip-path: circle(50% at 50% 50%);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .avatar:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -110,6 +111,7 @@ html, body {
   position: relative;
   z-index: 2;
 }
+
 .banner-info h1 {
   font-size: 2.3rem;
   font-weight: bold;
@@ -272,7 +274,7 @@ html, body {
 }
 
 /* -------------------------------------------
-   SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
+   SECTION CHUNG
 -------------------------------------------- */
 .section h2 {
   font-size: 1.1rem;
@@ -354,7 +356,7 @@ html, body {
    RESPONSIVE
 =========================================================== */
 
-/* === Dưới 768px: dành cho MOBILE === */
+/* === Dưới 768px: MOBILE === */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -388,7 +390,7 @@ html, body {
   }
 }
 
-/* === Từ 769px đến 1024px: dành cho TABLET === */
+/* === Từ 769px đến 1024px: TABLET === */
 @media (min-width: 769px) and (max-width: 1024px) {
   .cv-main {
     flex-direction: column;
@@ -405,5 +407,27 @@ html, body {
 
   .navbar ul {
     gap: 24px;
+  }
+}
+
+/* === Từ 769px trở lên: canh giữa BANNER === */
+@media (min-width: 769px) {
+  .banner {
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .avatar-outer {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -110px;
+  }
+
+  .banner-info {
+    margin-left: 0;
+    margin-bottom: 32px;
+    text-align: center;
   }
 }
