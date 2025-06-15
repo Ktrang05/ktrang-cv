@@ -7,28 +7,57 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   width: 100%;
   height: 100%;
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f4f6fa;
-  font-size: 16px; 
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
 /* -------------------------------------------
-   BANNER PHẦN ĐẦU CV
+   NAVBAR
+-------------------------------------------- */
+.navbar {
+  background-color: #232c3d;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #b5b6ff;
+}
+
+/* -------------------------------------------
+   BANNER
 -------------------------------------------- */
 .banner {
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to right, #232c3d, #4a598a);
   color: #fff;
   display: flex;
   align-items: flex-end;
   height: 180px;
   position: relative;
-  padding-left: 60px;
-  padding-right: 24px;
+  padding: 30px 20px 24px 60px;
 }
 
 .avatar-outer {
@@ -78,16 +107,57 @@ body, html {
 }
 
 /* -------------------------------------------
-   BỐ CỤC TỔNG THỂ
+   RESPONSIVE
+-------------------------------------------- */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .avatar-outer {
+    position: static;
+    margin-bottom: 16px;
+  }
+
+  .banner-info {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .cv-main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-content {
+    padding: 30px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* -------------------------------------------
+   CV MAIN BỐ CỤC
 -------------------------------------------- */
 .cv-main {
   display: flex;
-  width: 100%;
+  width: 100vw;
   min-height: calc(100vh - 180px);
 }
 
 /* -------------------------------------------
-   SIDEBAR BÊN TRÁI
+   SIDEBAR
 -------------------------------------------- */
 .sidebar {
   background: #edeef2;
@@ -113,6 +183,9 @@ body, html {
   margin-bottom: 28px;
 }
 
+/* -------------------------------------------
+   THÔNG TIN LIÊN HỆ
+-------------------------------------------- */
 .contact ul {
   list-style: none;
   line-height: 1.6;
@@ -120,14 +193,19 @@ body, html {
   margin-top: 12px;
   margin-bottom: 24px;
 }
+
 .contact ul li {
   margin-bottom: 6px;
 }
+
 .contact ul li i {
   margin-right: 10px;
   color: #232c3d;
 }
 
+/* -------------------------------------------
+   KỸ NĂNG & NGÔN NGỮ
+-------------------------------------------- */
 .skills-list {
   display: flex;
   flex-direction: column;
@@ -158,7 +236,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   MAIN CONTENT
+   NỘI DUNG CHÍNH
 -------------------------------------------- */
 .main-content {
   flex: 1;
@@ -169,6 +247,9 @@ body, html {
   gap: 38px;
 }
 
+/* -------------------------------------------
+   TIMELINE
+-------------------------------------------- */
 .timeline {
   position: relative;
   padding-left: 0;
@@ -208,11 +289,16 @@ body, html {
   font-size: 14px;
   box-shadow: 0 0 0 4px #fff;
   z-index: 1;
+  transition: transform 0.3s ease;
 }
+
 .timeline-icon:hover {
   transform: scale(1.15) rotate(10deg);
 }
 
+/* -------------------------------------------
+   SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
+-------------------------------------------- */
 .section h2 {
   font-size: 1.1rem;
   color: #232c3d;
@@ -263,36 +349,6 @@ body, html {
 }
 
 /* -------------------------------------------
-   NAVBAR
--------------------------------------------- */
-.navbar {
-  background-color: #232c3d;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  top: 0;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #b5b6ff;
-}
-
-/* -------------------------------------------
    SOCIAL MEDIA ICONS
 -------------------------------------------- */
 .icon-link {
@@ -301,216 +357,20 @@ body, html {
   font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .icon-link.github i {
-  color: #333333;
+  color: #333;
 }
+
 .icon-link.facebook i {
   color: #1877F2;
 }
+
 .icon-link.instagram i {
   color: #E1306C;
 }
+
 .icon-link:hover {
   transform: scale(1.2) rotate(8deg);
   opacity: 0.9;
-}
-
-/* -------------------------------------------
-   RESPONSIVE MOBILE
--------------------------------------------- */
-@media screen and (max-width: 768px) {
-  body, html {
-    font-size: 15px;
-    overflow-x: hidden;
-  }
-
-  .navbar {
-    position: sticky;
-    top: 0;
-    background-color: #232c3d;
-    padding: 8px 0;
-    z-index: 1000;
-  }
-
-  .navbar ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    padding: 0 10px;
-  }
-
-  .banner {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 24px 16px 40px;
-    text-align: center;
-  }
-
-  .avatar-outer {
-    position: static;
-    width: 160px;
-    height: 160px;
-    margin-bottom: 16px;
-  }
-
-  .avatar {
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .banner-info {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  .banner-info h1 {
-    font-size: 1.6rem;
-  }
-
-  .job-title {
-    font-size: 1rem;
-    color: #c3c4ff;
-  }
-
-  .cv-main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    padding: 24px 16px;
-  }
-
-  .main-content {
-    width: 100%;
-    padding: 24px 16px;
-  }
-
-  .timeline::before {
-    left: 24px;
-  }
-
-  .timeline-item {
-    padding-left: 70px;
-  }
-
-  .timeline-icon {
-    left: 10px;
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-  }
-
-  .section ul,
-  .section p,
-  .exp-header,
-  .exp-company,
-  .edu-degree,
-  .edu-time,
-  .edu-detail {
-    font-size: 15px;
-  }
-
-  footer {
-    font-size: 14px;
-    padding: 16px 10px;
-    text-align: center;
-  }
-}
-
-/* -------------------------------------------
-   RESPONSIVE TABLET
--------------------------------------------- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body, html {
-    font-size: 16px;
-    overflow-x: hidden;
-  }
-
-  .banner {
-    flex-direction: row;
-    align-items: flex-end;
-    padding: 24px 24px;
-    height: auto;
-    text-align: left;
-  }
-
-  .avatar-outer {
-    position: static;
-    width: 180px;
-    height: 180px;
-    margin-bottom: 0;
-    margin-right: 20px;
-  }
-
-  .avatar {
-    width: 170px;
-    height: 170px;
-  }
-
-  .banner-info {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  .banner-info h1 {
-    font-size: 2rem;
-  }
-
-  .job-title {
-    font-size: 1.05rem;
-  }
-
-  .cv-main {
-    flex-direction: row;
-  }
-
-  .sidebar {
-    width: 35%;
-    padding: 40px 20px;
-  }
-
-  .main-content {
-    width: 65%;
-    padding: 40px 24px;
-  }
-
-  .navbar ul {
-    gap: 28px;
-  }
-
-  .timeline::before {
-    left: 35px;
-  }
-
-  .timeline-item {
-    padding-left: 80px;
-  }
-
-  .timeline-icon {
-    left: 18px;
-    width: 24px;
-    height: 24px;
-    font-size: 13px;
-  }
-
-  .section ul,
-  .section p,
-  .exp-header,
-  .exp-company,
-  .edu-degree,
-  .edu-time,
-  .edu-detail {
-    font-size: 16px;
-  }
-
-  footer {
-    font-size: 15px;
-    padding: 18px 16px;
-    text-align: center;
-  }
 }
