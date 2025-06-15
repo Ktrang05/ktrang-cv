@@ -31,7 +31,6 @@ body, html {
   padding-right: 24px;
 }
 
-/* Ảnh avatar hình tròn bên trái banner */
 .avatar-outer {
   position: absolute;
   left: 20px;
@@ -44,7 +43,6 @@ body, html {
   justify-content: center;
 }
 
-/* Style cho ảnh avatar */
 .avatar {
   width: 208px;
   height: 208px;
@@ -61,7 +59,6 @@ body, html {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Thông tin tên và chức danh bên phải avatar */
 .banner-info {
   margin-left: 200px;
   margin-bottom: 32px;
@@ -78,47 +75,6 @@ body, html {
 .job-title {
   font-size: 1.15rem;
   color: #b5b6ff;
-}
-
-/* -------------------------------------------
-   RESPONSIVE: Khi màn hình nhỏ
--------------------------------------------- */
-@media (max-width: 768px) {
-  .banner {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .avatar-outer {
-    position: static;
-    margin-bottom: 16px;
-  }
-
-  .banner-info {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  .cv-main {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .main-content {
-    padding: 30px 20px;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 12px;
-  }
 }
 
 /* -------------------------------------------
@@ -157,9 +113,6 @@ body, html {
   margin-bottom: 28px;
 }
 
-/* -------------------------------------------
-   THÔNG TIN LIÊN HỆ
--------------------------------------------- */
 .contact ul {
   list-style: none;
   line-height: 1.6;
@@ -167,19 +120,14 @@ body, html {
   margin-top: 12px;
   margin-bottom: 24px;
 }
-
 .contact ul li {
   margin-bottom: 6px;
 }
-
 .contact ul li i {
   margin-right: 10px;
   color: #232c3d;
 }
 
-/* -------------------------------------------
-   KỸ NĂNG & NGÔN NGỮ
--------------------------------------------- */
 .skills-list {
   display: flex;
   flex-direction: column;
@@ -191,7 +139,6 @@ body, html {
   color: #333;
 }
 
-/* Danh sách ngôn ngữ: hiển thị dạng lưới */
 .languages-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -203,7 +150,6 @@ body, html {
   color: #333;
 }
 
-/* Icon dấu chấm đầu dòng */
 .skills-list li::before,
 .languages-list li::before {
   content: "• ";
@@ -212,7 +158,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   NỘI DUNG CHÍNH CV
+   MAIN CONTENT
 -------------------------------------------- */
 .main-content {
   flex: 1;
@@ -223,7 +169,6 @@ body, html {
   gap: 38px;
 }
 
-/* Timeline hiển thị học vấn, kinh nghiệm dạng trục dọc */
 .timeline {
   position: relative;
   padding-left: 0;
@@ -248,7 +193,6 @@ body, html {
   scroll-margin-top: 100px;
 }
 
-/* Icon chấm tròn trong timeline */
 .timeline-icon {
   position: absolute;
   top: 0;
@@ -265,14 +209,10 @@ body, html {
   box-shadow: 0 0 0 4px #fff;
   z-index: 1;
 }
-
 .timeline-icon:hover {
   transform: scale(1.15) rotate(10deg);
 }
 
-/* -------------------------------------------
-   PHẦN SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
--------------------------------------------- */
 .section h2 {
   font-size: 1.1rem;
   color: #232c3d;
@@ -323,7 +263,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   THANH ĐIỀU HƯỚNG (NAVBAR)
+   NAVBAR
 -------------------------------------------- */
 .navbar {
   background-color: #232c3d;
@@ -353,7 +293,7 @@ body, html {
 }
 
 /* -------------------------------------------
-   CÁC ICON SOCIAL MEDIA
+   SOCIAL MEDIA ICONS
 -------------------------------------------- */
 .icon-link {
   display: inline-block;
@@ -361,26 +301,22 @@ body, html {
   font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
-/* Mỗi mạng xã hội có màu riêng */
 .icon-link.github i {
   color: #333333;
 }
-
 .icon-link.facebook i {
   color: #1877F2;
 }
-
 .icon-link.instagram i {
   color: #E1306C;
 }
-
 .icon-link:hover {
   transform: scale(1.2) rotate(8deg);
   opacity: 0.9;
 }
+
 /* -------------------------------------------
-   RESPONSIVE-MOBILE
+   RESPONSIVE MOBILE
 -------------------------------------------- */
 @media screen and (max-width: 768px) {
   body, html {
@@ -388,7 +324,6 @@ body, html {
     overflow-x: hidden;
   }
 
-  /* Navbar */
   .navbar {
     position: sticky;
     top: 0;
@@ -405,7 +340,6 @@ body, html {
     padding: 0 10px;
   }
 
-  /* Banner */
   .banner {
     flex-direction: column;
     align-items: center;
@@ -441,7 +375,6 @@ body, html {
     color: #c3c4ff;
   }
 
-  /* Phần chính */
   .cv-main {
     display: flex;
     flex-direction: column;
@@ -457,7 +390,6 @@ body, html {
     padding: 24px 16px;
   }
 
-  /* Timeline */
   .timeline::before {
     left: 24px;
   }
@@ -473,7 +405,6 @@ body, html {
     font-size: 12px;
   }
 
-  /* Kích thước chữ cho nội dung */
   .section ul,
   .section p,
   .exp-header,
@@ -484,15 +415,15 @@ body, html {
     font-size: 15px;
   }
 
-  /* Footer */
   footer {
     font-size: 14px;
     padding: 16px 10px;
     text-align: center;
   }
 }
+
 /* -------------------------------------------
-   RESPONSIVE - TABLET (769px đến 1024px)
+   RESPONSIVE TABLET
 -------------------------------------------- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   body, html {
@@ -500,7 +431,6 @@ body, html {
     overflow-x: hidden;
   }
 
-  /* Banner */
   .banner {
     flex-direction: row;
     align-items: flex-end;
@@ -535,7 +465,6 @@ body, html {
     font-size: 1.05rem;
   }
 
-  /* Bố cục chính */
   .cv-main {
     flex-direction: row;
   }
@@ -550,12 +479,10 @@ body, html {
     padding: 40px 24px;
   }
 
-  /* Navbar */
   .navbar ul {
     gap: 28px;
   }
 
-  /* Timeline chỉnh cho vừa tablet */
   .timeline::before {
     left: 35px;
   }
@@ -571,7 +498,6 @@ body, html {
     font-size: 13px;
   }
 
-  /* Font chữ tablet */
   .section ul,
   .section p,
   .exp-header,
@@ -588,7 +514,3 @@ body, html {
     text-align: center;
   }
 }
-
-
-
-
