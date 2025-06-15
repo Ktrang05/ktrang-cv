@@ -57,7 +57,7 @@ html, body {
   align-items: flex-end;
   height: 180px;
   position: relative;
-  padding: 30px 20px 24px 60px;
+  padding: 90px 20px 24px 60px; /* thêm 90px để né navbar cố định */
 }
 
 .avatar-outer {
@@ -338,13 +338,12 @@ html, body {
    RESPONSIVE
 =========================================================== */
 
-/* === Dưới 768px: dành cho MOBILE === */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 30px 20px;
+    padding: 90px 20px 30px;
     text-align: center;
   }
 
@@ -377,7 +376,6 @@ html, body {
   }
 }
 
-/* === Từ 769px đến 1024px: dành cho TABLET === */
 @media (min-width: 769px) and (max-width: 1024px) {
   .cv-main {
     flex-direction: column;
@@ -396,5 +394,3 @@ html, body {
     gap: 24px;
   }
 }
-
-
