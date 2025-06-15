@@ -15,6 +15,8 @@ html, body {
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 80px;
 }
 
 /* -------------------------------------------
@@ -27,34 +29,22 @@ html, body {
   width: 100%;
   z-index: 999;
   top: 0;
-  overflow-x: auto;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 40px;
-  padding: 0 20px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.navbar ul::-webkit-scrollbar {
-  display: none;
-}
-
-.navbar li {
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
 }
 
 .navbar a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
@@ -274,7 +264,7 @@ html, body {
 }
 
 /* -------------------------------------------
-   SECTION CHUNG
+   SECTION CHUNG (HỌC VẤN, DỰ ÁN,...)
 -------------------------------------------- */
 .section h2 {
   font-size: 1.1rem;
@@ -356,7 +346,7 @@ html, body {
    RESPONSIVE
 =========================================================== */
 
-/* === Dưới 768px: MOBILE === */
+/* === Dưới 768px: dành cho MOBILE === */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -390,7 +380,7 @@ html, body {
   }
 }
 
-/* === Từ 769px đến 1024px: TABLET === */
+/* === Từ 769px đến 1024px: dành cho TABLET === */
 @media (min-width: 769px) and (max-width: 1024px) {
   .cv-main {
     flex-direction: column;
@@ -407,27 +397,5 @@ html, body {
 
   .navbar ul {
     gap: 24px;
-  }
-}
-
-/* === Từ 769px trở lên: canh giữa BANNER === */
-@media (min-width: 769px) {
-  .banner {
-    justify-content: center;
-    text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .avatar-outer {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -110px;
-  }
-
-  .banner-info {
-    margin-left: 0;
-    margin-bottom: 32px;
-    text-align: center;
   }
 }
