@@ -491,6 +491,104 @@ body, html {
     text-align: center;
   }
 }
+/* -------------------------------------------
+   RESPONSIVE - TABLET (769px đến 1024px)
+-------------------------------------------- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body, html {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  /* Banner */
+  .banner {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 24px 24px;
+    height: auto;
+    text-align: left;
+  }
+
+  .avatar-outer {
+    position: static;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .avatar {
+    width: 170px;
+    height: 170px;
+  }
+
+  .banner-info {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .banner-info h1 {
+    font-size: 2rem;
+  }
+
+  .job-title {
+    font-size: 1.05rem;
+  }
+
+  /* Bố cục chính */
+  .cv-main {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 35%;
+    padding: 40px 20px;
+  }
+
+  .main-content {
+    width: 65%;
+    padding: 40px 24px;
+  }
+
+  /* Navbar */
+  .navbar ul {
+    gap: 28px;
+  }
+
+  /* Timeline chỉnh cho vừa tablet */
+  .timeline::before {
+    left: 35px;
+  }
+
+  .timeline-item {
+    padding-left: 80px;
+  }
+
+  .timeline-icon {
+    left: 18px;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+  }
+
+  /* Font chữ tablet */
+  .section ul,
+  .section p,
+  .exp-header,
+  .exp-company,
+  .edu-degree,
+  .edu-time,
+  .edu-detail {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 15px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+}
+
 
 
 
